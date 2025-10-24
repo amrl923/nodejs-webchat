@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+#login, #chat {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+#messages {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 80%;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message strong {
+  color: #333;
+}
+
+.message.mine {
+  align-self: flex-end;
+  background: #cce5ff;
+  border-top-right-radius: 0;
+}
+
+.message.other {
+  align-self: flex-start;
+  background: #e2ffe6;
+  border-top-left-radius: 0;
+}
+
+.message.system {
+  align-self: center;
+  background: #fff3cd;
+  color: #856404;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+.time {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#messageInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  background: #4e6ef2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2c49d8;
+}
+
+/* 📱 Для телефонов */
+@media (max-width: 600px) {
+  #messages {
+    height: 300px;
+  }
+  button {
+    padding: 8px;
+  }
+  #messageInput {
+    font-size: 16px;
+  }
+}
